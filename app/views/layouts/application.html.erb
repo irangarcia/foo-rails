@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ScheduledTweets</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  </head>
+
+  <body>
+    <%= render partial: "shared/navbar" %>
+    <div class="flex flex-col mx-auto items-center">
+      <%= render partial: "shared/flash" %>
+    </div>
+    <div class="container flex flex-wrap justify-between items-center mx-auto max-w-6xl">
+      <%= yield %>
+    </div>
+  </body>
+</html>
